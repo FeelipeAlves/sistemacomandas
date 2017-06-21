@@ -4,5 +4,8 @@ CREATE TABLE orders (
   dateOrdered DATETIME,
   createdAt DATETIME,
   updatedAt DATETIME,
-  PRIMARY KEY (id)
+  FK_id INTEGER NOT NULL,
+
+  PRIMARY KEY (id),
+  FOREIGN KEY FK_idStatus REFERENCES status(id)
 );
